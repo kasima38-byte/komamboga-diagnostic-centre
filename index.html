@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Komamboga Diagnostic Centre — Ultrasound Services in Kampala</title>
+<meta name="description" content="Komamboga Diagnostic Centre offers professional ultrasound scanning in Komamboga, Kampala — obstetric, abdominal, pelvic and soft-tissue scans by a qualified sonographer.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0A2A4A;
+  --blue:#1B6FB8;
+  --blue-deep:#12507F;
+  --ice:#EAF3FB;
+  --ice-2:#F6FAFD;
+  --white:#FFFFFF;
+  --ink:#152535;
+  --muted:#5A7189;
+  --line:#D5E4F0;
+  --pulse:#E4573D;
+  --radius:14px;
+  --display:'Bricolage Grotesque',sans-serif;
+  --body:'Instrument Sans',sans-serif;
+  --mono:'IBM Plex Mono',monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);color:var(--ink);background:var(--white);line-height:1.6;font-size:16.5px}
+img{max-width:100%}
+a{color:var(--blue-deep)}
+.container{max-width:1120px;margin:0 auto;padding:0 24px}
+
+/* ---------- header ---------- */
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--navy)}
+.brand-mark{width:34px;height:34px;flex:none}
+.brand-name{font-family:var(--display);font-weight:700;font-size:1.05rem;line-height:1.15}
+.brand-name span{display:block;font-family:var(--mono);font-weight:400;font-size:.62rem;letter-spacing:.14em;color:var(--blue);text-transform:uppercase}
+.nav-links{display:flex;gap:26px;align-items:center}
+.nav-links a{text-decoration:none;color:var(--ink);font-weight:500;font-size:.95rem}
+.nav-links a:hover{color:var(--blue)}
+.btn{display:inline-block;background:var(--blue);color:#fff !important;padding:10px 20px;border-radius:999px;text-decoration:none;font-weight:600;font-size:.95rem;transition:background .2s}
+.btn:hover{background:var(--blue-deep)}
+.btn-outline{background:transparent;color:var(--blue-deep) !important;border:1.5px solid var(--blue);padding:10px 20px;border-radius:999px;text-decoration:none;font-weight:600;font-size:.95rem}
+.btn-outline:hover{background:var(--ice)}
+.nav-toggle{display:none}
+
+/* ---------- hero ---------- */
+.hero{background:linear-gradient(180deg,var(--ice-2) 0%,var(--white) 100%);border-bottom:1px solid var(--line);overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;padding:72px 0 80px}
+.eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);margin-bottom:14px}
+h1{font-family:var(--display);font-size:clamp(2.1rem,4.6vw,3.4rem);line-height:1.08;color:var(--navy);font-weight:700;letter-spacing:-.01em}
+.hero p.lead{margin:20px 0 30px;font-size:1.13rem;color:var(--muted);max-width:46ch}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+.hero-meta{margin-top:34px;display:flex;gap:28px;flex-wrap:wrap}
+.hero-meta div{font-size:.9rem;color:var(--muted)}
+.hero-meta strong{display:block;font-family:var(--mono);font-size:.78rem;letter-spacing:.1em;color:var(--navy);text-transform:uppercase;margin-bottom:2px}
+
+/* the sector-scan signature */
+.scan-frame{position:relative;background:var(--navy);border-radius:var(--radius);padding:22px 22px 18px;box-shadow:0 24px 60px -24px rgba(10,42,74,.45)}
+.scan-frame svg{display:block;width:100%;height:auto}
+.scan-hud{display:flex;justify-content:space-between;font-family:var(--mono);font-size:.66rem;letter-spacing:.08em;color:#9FC5E8;margin-bottom:10px}
+.scan-hud-bottom{margin-bottom:0;margin-top:10px;color:#6E96BC}
+@keyframes sweep{0%{transform:rotate(-38deg)}50%{transform:rotate(38deg)}100%{transform:rotate(-38deg)}}
+.sweep-line{transform-origin:200px 20px;animation:sweep 5.5s ease-in-out infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
+.rec-dot{animation:blink 1.4s steps(1) infinite}
+@media (prefers-reduced-motion: reduce){
+  .sweep-line{animation:none;transform:rotate(20deg)}
+  .rec-dot{animation:none}
+  html{scroll-behavior:auto}
+}
+
+/* ---------- sections ---------- */
+section{padding:76px 0}
+.section-head{max-width:640px;margin-bottom:44px}
+h2{font-family:var(--display);font-size:clamp(1.6rem,3vw,2.2rem);color:var(--navy);font-weight:700;line-height:1.15;margin-bottom:12px}
+.section-head p{color:var(--muted)}
+
+/* services */
+#services{background:var(--white)}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.svc{border:1px solid var(--line);border-radius:var(--radius);padding:26px 24px;background:var(--white);display:flex;flex-direction:column;gap:10px;transition:border-color .2s, box-shadow .2s}
+.svc:hover{border-color:var(--blue);box-shadow:0 10px 30px -18px rgba(27,111,184,.35)}
+.svc .code{font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;color:var(--blue);text-transform:uppercase}
+.svc h3{font-family:var(--display);font-size:1.12rem;color:var(--navy);font-weight:600}
+.svc p{font-size:.95rem;color:var(--muted);flex:1}
+.svc .prep{border-top:1px dashed var(--line);padding-top:10px;font-size:.86rem;color:var(--ink)}
+.svc .prep b{font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--blue-deep);display:block;margin-bottom:2px;font-weight:500}
+
+/* why us */
+#why{background:var(--ice-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.why-card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:26px 24px}
+.why-card .ic{width:42px;height:42px;border-radius:10px;background:var(--ice);display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.why-card h3{font-family:var(--display);font-size:1.08rem;color:var(--navy);font-weight:600;margin-bottom:6px}
+.why-card p{font-size:.93rem;color:var(--muted)}
+
+/* visit / steps */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;counter-reset:step}
+.step{border-left:3px solid var(--blue);padding:4px 0 4px 18px}
+.step h3{font-family:var(--display);font-size:1.05rem;color:var(--navy);font-weight:600;margin-bottom:4px}
+.step p{font-size:.93rem;color:var(--muted)}
+.step .code{font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;color:var(--blue);display:block;margin-bottom:6px}
+
+/* contact */
+#contact{background:var(--navy);color:#DCEAF6}
+#contact h2{color:#fff}
+#contact .section-head p{color:#9FC5E8}
+.contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px}
+.contact-list{display:flex;flex-direction:column;gap:22px}
+.contact-item strong{display:block;font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:#7FB2DC;margin-bottom:4px;font-weight:500}
+.contact-item a{color:#fff;text-decoration:none;font-size:1.05rem}
+.contact-item a:hover{text-decoration:underline}
+.contact-item p{color:#DCEAF6;font-size:1.02rem}
+.hours{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:var(--radius);padding:26px}
+.hours h3{font-family:var(--display);color:#fff;font-size:1.1rem;margin-bottom:14px;font-weight:600}
+.hours table{width:100%;border-collapse:collapse;font-size:.95rem}
+.hours td{padding:7px 0;border-bottom:1px solid rgba(255,255,255,.1)}
+.hours tr:last-child td{border-bottom:none}
+.hours td:last-child{text-align:right;font-family:var(--mono);font-size:.85rem;color:#BFDCF3}
+.note{margin-top:14px;font-size:.85rem;color:#7FB2DC}
+
+/* footer */
+footer{background:#071E36;color:#7FA6C9;padding:26px 0;font-size:.88rem}
+.footer-row{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+footer a{color:#BFDCF3;text-decoration:none}
+footer a:hover{text-decoration:underline}
+
+/* focus visibility */
+a:focus-visible,.btn:focus-visible,button:focus-visible{outline:3px solid var(--pulse);outline-offset:2px;border-radius:6px}
+
+/* ---------- responsive ---------- */
+@media (max-width: 900px){
+  .hero-grid{grid-template-columns:1fr;padding:48px 0 56px}
+  .svc-grid,.why-grid,.steps{grid-template-columns:1fr 1fr}
+  .contact-grid{grid-template-columns:1fr}
+}
+@media (max-width: 620px){
+  .nav-links{display:none}
+  .nav-toggle{display:block;background:none;border:1.5px solid var(--line);border-radius:8px;padding:8px 10px;font-family:var(--mono);font-size:.75rem;color:var(--navy);cursor:pointer}
+  .nav-links.open{display:flex;position:absolute;top:68px;left:0;right:0;background:var(--white);flex-direction:column;padding:18px 24px;border-bottom:1px solid var(--line);gap:16px;align-items:flex-start}
+  .svc-grid,.why-grid,.steps{grid-template-columns:1fr}
+  section{padding:56px 0}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="brand" href="#top" aria-label="Komamboga Diagnostic Centre — home">
+      <svg class="brand-mark" viewBox="0 0 34 34" aria-hidden="true">
+        <path d="M17 3 L31 27 A17 17 0 0 1 3 27 Z" fill="#1B6FB8" opacity="0.15"/>
+        <path d="M17 3 L27 24 A12.5 12.5 0 0 1 7 24 Z" fill="#1B6FB8" opacity="0.35"/>
+        <path d="M17 3 L23 21 A7.5 7.5 0 0 1 11 21 Z" fill="#1B6FB8"/>
+      </svg>
+      <span class="brand-name">Komamboga Diagnostic Centre<span>Ultrasound · Kampala</span></span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="navlinks" onclick="const n=document.getElementById('navlinks');const open=n.classList.toggle('open');this.setAttribute('aria-expanded',open)">MENU</button>
+    <nav class="nav-links" id="navlinks" aria-label="Main">
+      <a href="#services">Scans</a>
+      <a href="#why">Why us</a>
+      <a href="#visit">Your visit</a>
+      <a class="btn" href="#contact">Book a scan</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero" style="padding:0">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow">Komamboga · Kampala</div>
+        <h1>Clear answers, one scan at a time.</h1>
+        <p class="lead">Komamboga Diagnostic Centre provides professional ultrasound scanning close to home — performed by a qualified sonographer, explained in plain language, with your report ready the same day.</p>
+        <div class="hero-ctas">
+          <a class="btn" href="#contact">Book a scan</a>
+          <a class="btn-outline" href="#services">See our scans</a>
+        </div>
+        <div class="hero-meta">
+          <div><strong>Reports</strong>Same-day results</div>
+          <div><strong>Hours</strong>Mon–Fri, 8am–5pm</div>
+          <div><strong>Location</strong>Opp. Komamboga HC III</div>
+        </div>
+      </div>
+
+      <!-- signature: sector-scan display -->
+      <div class="scan-frame" aria-hidden="true">
+        <div class="scan-hud">
+          <span>KDC-US · C3-7 MHz</span>
+          <span><span class="rec-dot" style="color:#E4573D">●</span> LIVE</span>
+        </div>
+        <svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Stylised ultrasound sector scan">
+          <defs>
+            <linearGradient id="fan" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#2E85CE" stop-opacity="0.55"/>
+              <stop offset="60%" stop-color="#1B6FB8" stop-opacity="0.28"/>
+              <stop offset="100%" stop-color="#0F3E66" stop-opacity="0.12"/>
+            </linearGradient>
+          </defs>
+          <!-- sector wedge -->
+          <path d="M200 20 L58 232 A248 248 0 0 0 342 232 Z" fill="url(#fan)"/>
+          <!-- depth arcs -->
+          <path d="M154 89 A83 83 0 0 0 246 89" fill="none" stroke="#6FA9D8" stroke-opacity=".4" stroke-width="1"/>
+          <path d="M120 140 A146 146 0 0 0 280 140" fill="none" stroke="#6FA9D8" stroke-opacity=".3" stroke-width="1"/>
+          <path d="M87 190 A208 208 0 0 0 313 190" fill="none" stroke="#6FA9D8" stroke-opacity=".22" stroke-width="1"/>
+          <!-- echo speckle -->
+          <g fill="#BFDCF3">
+            <circle cx="182" cy="120" r="1.4" opacity=".7"/><circle cx="214" cy="104" r="1.1" opacity=".5"/>
+            <circle cx="240" cy="150" r="1.6" opacity=".6"/><circle cx="163" cy="168" r="1.2" opacity=".45"/>
+            <circle cx="205" cy="185" r="1.8" opacity=".65"/><circle cx="256" cy="196" r="1.2" opacity=".4"/>
+            <circle cx="140" cy="200" r="1.4" opacity=".5"/><circle cx="228" cy="132" r="1" opacity=".5"/>
+            <circle cx="188" cy="150" r="1.1" opacity=".55"/><circle cx="270" cy="172" r="1.3" opacity=".45"/>
+          </g>
+          <!-- gentle "structure" -->
+          <ellipse cx="204" cy="158" rx="46" ry="30" fill="none" stroke="#BFDCF3" stroke-opacity=".5" stroke-width="1.5"/>
+          <ellipse cx="204" cy="158" rx="24" ry="15" fill="#0C314F" opacity=".8"/>
+          <!-- sweep line -->
+          <g class="sweep-line">
+            <line x1="200" y1="20" x2="200" y2="244" stroke="#9FD1F8" stroke-width="2" stroke-linecap="round" opacity=".9"/>
+          </g>
+          <!-- probe origin -->
+          <circle cx="200" cy="20" r="5" fill="#EAF3FB"/>
+        </svg>
+        <div class="scan-hud scan-hud-bottom">
+          <span>D 14.0 cm · G 62</span>
+          <span>KOMAMBOGA DIAGNOSTIC CENTRE</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SERVICES ================= -->
+  <section id="services">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Our scans</div>
+        <h2>Ultrasound services</h2>
+        <p>Every scan comes with a written report the same day, and time to ask questions. Preparation notes are included below so you arrive ready.</p>
+      </div>
+      <div class="svc-grid">
+        <div class="svc">
+          <span class="code">OBS · 1st–3rd trimester</span>
+          <h3>Obstetric scans</h3>
+          <p>Pregnancy dating, growth and wellbeing checks, anomaly screening and presentation scans — with clear explanations at every stage of your pregnancy.</p>
+          <div class="prep"><b>How to prepare</b>Early pregnancy: drink 3–4 glasses of water 1 hour before and don't empty your bladder. Later scans: no preparation needed.</div>
+        </div>
+        <div class="svc">
+          <span class="code">ABD · Upper abdomen</span>
+          <h3>Abdominal scans</h3>
+          <p>Liver, gallbladder, pancreas, spleen and kidneys — for abdominal pain, suspected gallstones, and general check-ups requested by your doctor.</p>
+          <div class="prep"><b>How to prepare</b>Do not eat for 6–8 hours before your scan. Water is fine. Morning appointments are easiest — just skip breakfast.</div>
+        </div>
+        <div class="svc">
+          <span class="code">PEL · Pelvis</span>
+          <h3>Pelvic scans</h3>
+          <p>Uterus, ovaries, prostate and bladder assessments — for irregular periods, pelvic pain, fibroid checks and fertility work-ups.</p>
+          <div class="prep"><b>How to prepare</b>Arrive with a full bladder: drink 4–5 glasses of water 1 hour before and hold it until after the scan.</div>
+        </div>
+        <div class="svc">
+          <span class="code">SMP · Small parts</span>
+          <h3>Thyroid, breast &amp; scrotal</h3>
+          <p>High-frequency scans of the thyroid, breast lumps, scrotum and other superficial structures, with careful documentation of any findings.</p>
+          <div class="prep"><b>How to prepare</b>No preparation needed. Wear clothing that allows easy access to the area being scanned.</div>
+        </div>
+        <div class="svc">
+          <span class="code">MSK · Soft tissue</span>
+          <h3>Musculoskeletal &amp; soft tissue</h3>
+          <p>Shoulders, tendons, muscle injuries, swellings and lumps under the skin — useful for sports injuries and unexplained soft-tissue masses.</p>
+          <div class="prep"><b>How to prepare</b>No preparation needed. If you have previous scan reports or X-rays, bring them along.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= WHY US ================= -->
+  <section id="why">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Why patients choose us</div>
+        <h2>Imaging you can trust, service you can feel</h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1B6FB8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l7 4v6c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
+          <h3>Qualified &amp; experienced</h3>
+          <p>Scans are performed by a trained medical imaging professional who follows recognised scanning protocols for every examination.</p>
+        </div>
+        <div class="why-card">
+          <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1B6FB8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+          <h3>Same-day reports</h3>
+          <p>Your written report is ready before you leave, so you can return to your doctor without an extra trip or a long wait.</p>
+        </div>
+        <div class="why-card">
+          <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1B6FB8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8z"/></svg></div>
+          <h3>Explained in plain language</h3>
+          <p>We take time to walk you through what the scan shows — in English or Luganda — so you leave understanding your results, not guessing.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= YOUR VISIT ================= -->
+  <section id="visit">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Your visit</div>
+        <h2>What to expect</h2>
+        <p>Most visits take 30–45 minutes from arrival to report in hand.</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <span class="code">STEP 01</span>
+          <h3>Book or walk in</h3>
+          <p>Call or WhatsApp us to book, or simply walk in during opening hours. Bring your doctor's request form if you have one.</p>
+        </div>
+        <div class="step">
+          <span class="code">STEP 02</span>
+          <h3>Your scan</h3>
+          <p>The scan itself is painless and typically takes 15–25 minutes. We explain what we're looking at as we go.</p>
+        </div>
+        <div class="step">
+          <span class="code">STEP 03</span>
+          <h3>Report &amp; next steps</h3>
+          <p>You receive a printed report the same day, with images where relevant, ready to take back to your referring doctor.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow" style="color:#7FB2DC">Book a scan</div>
+        <h2>Find us in Komamboga</h2>
+        <p>Call ahead to book, or walk in — we'll take care of you either way.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-list">
+          <div class="contact-item">
+            <strong>Phone / WhatsApp</strong>
+            <a href="tel:+256778080388">+256 778 080 388</a><br>
+            <a href="tel:+256777906676">+256 777 906 676</a>
+          </div>
+          <div class="contact-item">
+            <strong>Email</strong>
+            <a href="mailto:kasimallan38@gmail.com">kasimallan38@gmail.com</a>
+          </div>
+          <div class="contact-item">
+            <strong>Location</strong>
+            <p>Komamboga, opposite Komamboga Health Centre III<br>Kawempe Division, Kampala, Uganda</p>
+          </div>
+          <div class="contact-item">
+            <strong>Referring doctors</strong>
+            <p>We welcome referrals — send your patient with a request form and we'll return a detailed report the same day.</p>
+          </div>
+        </div>
+        <div class="hours">
+          <h3>Opening hours</h3>
+          <table>
+            <tr><td>Monday – Friday</td><td>08:00 – 17:00</td></tr>
+            <tr><td>Saturday</td><td>Closed</td></tr>
+            <tr><td>Sunday</td><td>Closed</td></tr>
+          </table>
+          <p class="note">Fasting abdominal scans are best booked for the morning.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container footer-row">
+    <span>© 2026 Komamboga Diagnostic Centre · Opposite Komamboga Health Centre III, Kawempe Division, Kampala, Uganda</span>
+    <span><a href="#top">Back to top ↑</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
